@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Part1 from "./components/Part1";
+import Part2 from "./components/Part2";
+import Results from "./components/Results";
+import { SurveyProvider } from "./context/SurveyContext";
+import "./App.css";
 
 function App() {
+  const [showResults, setShowResults] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SurveyProvider>
+      <div>
+        {!showResults ? (
+          <>
+            <Part1 />
+            <Part2 />
+            <button onClick={() => setShowResults(true)}>Показать результаты</button>
+          </>
+        ) : (
+          <Results />
+        )}
+      </div>
+    </SurveyProvider>
   );
 }
 
