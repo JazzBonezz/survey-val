@@ -15,7 +15,9 @@ function App() {
           <>
             <Part1 />
             <Part2 />
-            <button onClick={() => setShowResults(true)}>Показать результаты</button>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}>
+              <button onClick={() => setShowResults(true)}>Показать результаты</button>
+            </div>  
           </>
         ) : (
           <Results />

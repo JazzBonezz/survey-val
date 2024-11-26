@@ -18,7 +18,7 @@ const part1Questions = [
       name: "Курите ли Вы?",
       options: [
         { value: 1, label: "Да (1)" },
-        { value: 2, label: "Нет (0)" },
+        { value: 0, label: "Нет (0)" },
       ],
     },
     {
@@ -31,34 +31,34 @@ const part1Questions = [
       type: "Select",
       name: "Показатели систолического артериального давления: ____",
       options: [
-        { value: "norm", label: "120-129 – норма (0)" },
-        { value: "high", label: "≥130 – повышенное АД (2)" },
-        { value: "low", label: "<120 – пониженное АД (0)" },
+        { value: 0, label: "120-129 – норма (0)" },
+        { value: 2, label: "≥130 – повышенное АД (2)" },
+        { value: 0, label: "<120 – пониженное АД (0)" },
       ],
     },
     {
       type: "MultiSelect",
       name: "Встречались ли у Ваших ближайших родственников заболевания?",
       options: [
-        { value: "none", label: "Нет (0)" },
-        { value: "diabetes", label: "Сахарный диабет" },
-        { value: "hypertension", label: "Артериальная гипертензия" },
-        { value: "hypertension", label: "Ишемическая болезнь сердца" },
-        { value: "hypertension", label: "Ожирение" },
-        { value: "hypertension", label: "Почечная недостаточность" },
-        { value: "hypertension", label: "Тромбоэмболия легочной артерии (ТЭЛА)" },
-        { value: "hypertension", label: "Варикоз" },
-        { value: "hypertension", label: "Остеопороз" },
-        { value: "hypertension", label: "Саркопения" },
-        { value: "hypertension", label: "Атеросклероз" },
+        { value: 0, label: "Нет (0)" },
+        { value: 1, label: "Сахарный диабет" },
+        { value: 1, label: "Артериальная гипертензия" },
+        { value: 1, label: "Ишемическая болезнь сердца" },
+        { value: 1, label: "Ожирение" },
+        { value: 1, label: "Почечная недостаточность" },
+        { value: 1, label: "Тромбоэмболия легочной артерии (ТЭЛА)" },
+        { value: 2, label: "Варикоз" },
+        { value: 1, label: "Остеопороз" },
+        { value: 1, label: "Саркопения" },
+        { value: 2, label: "Атеросклероз" },
       ],
     },
     {
       type: "Select",
       name: "Сколько шагов в день вы проходите?",
       options: [
-        { value: "5000_or_more", label: "5000 или больше (0)" },
-        { value: "less_than_5000", label: "Меньше 5000 (1)" },
+        { value: 0, label: "5000 или больше" },
+        { value: 1, label: "Меньше 5000" },
       ],
     },
     
@@ -66,9 +66,9 @@ const part1Questions = [
         type: "Select",
         name: "Ваша профессия?",
         options: [
-          { value: "5000_or_more", label: "Сидячая работа (4 часа и более) (0,5)" },
-          { value: "less_than_5000", label: "Стоячая работа (4 часа и более) (0,5)" },
-          { value: "less_than_5000", label: "Умеренное соотношения сидячей и стоячей работы (работа со сменой деятельности) (0)" },
+          { value: 0.5, label: "Сидячая работа (4 часа и более)" },
+          { value: 0.5, label: "Стоячая работа (4 часа и более)" },
+          { value: 0, label: "Умеренное соотношения сидячей и стоячей работы (работа со сменой деятельности)" },
         ],
     },
 
@@ -76,10 +76,10 @@ const part1Questions = [
         type: "Select",
         name: "Употребляете ли вы алкоголь?",
         options: [
-          { value: "5000_or_more", label: "Никогда (0)" },
-          { value: "less_than_5000", label: "Редко (1-2 раза в год) (1)" },
-          { value: "less_than_5000", label: "Умеренно (раз в 1-3 месяца) (1)" },
-          { value: "less_than_5000", label: "Часто (каждую неделю/практически каждую неделю) (1)" },
+          { value: 0, label: "Никогда" },
+          { value: 1, label: "Редко (1-2 раза в год)" },
+          { value: 1, label: "Умеренно (раз в 1-3 месяца)" },
+          { value: 1, label: "Часто (каждую неделю/практически каждую неделю)" },
         ],
     },
 
@@ -87,14 +87,23 @@ const part1Questions = [
         type: "Select",
         name: "Частота употребления жирной и соленой пищи: ",
         options: [
-          { value: "5000_or_more", label: "Очень часто (каждый день) (0,5)" },
-          { value: "less_than_5000", label: "Часто (3-5 раз в неделю) (0,5)" },
-          { value: "less_than_5000", label: "Иногда (1-2 раза в неделю) (0)" },
-          { value: "less_than_5000", label: "Редко (несколько раз в месяц) (0)" },
+          { value: 0.5, label: "Очень часто (каждый день)" },
+          { value: 0.5, label: "Часто (3-5 раз в неделю)" },
+          { value: 0, label: "Иногда (1-2 раза в неделю)" },
+          { value: 0, label: "Редко (несколько раз в месяц)" },
         ],
     },
     
-
+    {
+      type: "Select",
+      name: "Частота употребления жирной и соленой пищи: ",
+      options: [
+        { value: 0.5, label: "Очень часто (каждый день)" },
+        { value: 0.5, label: "Часто (3-5 раз в неделю)" },
+        { value: 0, label: "Иногда (1-2 раза в неделю)" },
+        { value: 0, label: "Редко (несколько раз в месяц)" },
+      ],
+  },
 
   ];
   

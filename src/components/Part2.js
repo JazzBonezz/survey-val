@@ -14,7 +14,6 @@ const Part2 = () => (
         </li>
       ))}
     </ul>
-    <button type="submit">Отправить</button>
   </div>
 );
 
