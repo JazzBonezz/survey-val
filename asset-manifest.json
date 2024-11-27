@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/survey-val/static/css/main.bd42f5ef.css",
+    "main.js": "/survey-val/static/js/main.6e7a7586.js",
+    "index.html": "/survey-val/index.html",
+    "main.bd42f5ef.css.map": "/survey-val/static/css/main.bd42f5ef.css.map",
+    "main.6e7a7586.js.map": "/survey-val/static/js/main.6e7a7586.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd42f5ef.css",
+    "static/js/main.6e7a7586.js"
+  ]
+}
