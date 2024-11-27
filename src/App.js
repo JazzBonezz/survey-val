@@ -14,8 +14,8 @@ function App() {
           path="/"
           element={
             <div className="welcomePage">
-              <h1 className="welcome-h1">Опрос о состоянии нижних конечностей</h1>
-              <Link to="/test" className="testLink">Начать тест</Link>
+              <h1 className="welcome-h1">Оценка состояния нижних конечностей</h1>
+              <Link to="/test" className="testLink">Начать</Link>
             </div>
           }
         />
