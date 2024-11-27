@@ -1,19 +1,5 @@
 const part1Questions = [
     {
-      type: "Opros",
-      name: "Ваш возраст: _____ лет (18+)",
-      inputType: "number",
-      placeholder: "Введите значение",
-    },
-    {
-      type: "Select",
-      name: "Ваш пол: ",
-      options: [
-        { value: "male", label: "Мужской" },
-        { value: "female", label: "Женский" },
-      ],
-    },
-    {
       type: "Select",
       name: "Курите ли Вы?",
       options: [
@@ -22,18 +8,23 @@ const part1Questions = [
       ],
     },
     {
-      type: "Opros",
-      name: "Ваш вес: _____ кг, рост: _____ м (например рост 168 см = 1,68 – записать в м.) (формула ИМТ = кг/м^2 )",
-      inputType: "text",
-      placeholder: "Введите значение",
+      type: "Select",
+      name: "	Ваш вес: _____ кг, рост: _____ м (например рост 168 см = 1,68 – записать в м.) (формула ИМТ = кг/м^2 )",
+      options: [
+        { value: "0", label: "<18 – недостаточная масса тела" },
+        { value: "0", label: "18-24,9 – норма" },
+        { value: "1", label: "25 – 29,9 – избыточная масса тела" },
+        { value: "2", label: "≥30 – ожирение" },
+      ],
     },
     {
       type: "Select",
       name: "Показатели систолического артериального давления: ____",
       options: [
+        { value: 0, label: "<120 – пониженное АД (0)" },
         { value: 0, label: "120-129 – норма (0)" },
         { value: 2, label: "≥130 – повышенное АД (2)" },
-        { value: 0, label: "<120 – пониженное АД (0)" },
+        
       ],
     },
     {

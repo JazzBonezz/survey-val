@@ -45,7 +45,9 @@ const Opros = ({ name, type = "text", text }) => {
         />
         {error && (
           <div className="tooltip">
-            Можно вводить только числа и точку
+            <span className="tooltip-text">
+              Можно вводить только числа и точку
+            </span>
           </div>
         )}
       </div>
